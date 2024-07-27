@@ -1,14 +1,13 @@
+// script.js
 
-document.querySelectorAll('.nav-links a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        
-        window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: 'smooth'
+document.addEventListener('DOMContentLoaded', () =>
+    document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('.animate__animated');
+    
+        elements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.remove('animate__animated');
+            }, (index + 1) * 2000);
         });
     });
-});
+    
