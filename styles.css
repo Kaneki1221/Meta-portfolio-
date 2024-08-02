@@ -26,8 +26,21 @@ header {
 }
 
 #about {
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    
     background-color: #f8f9fa;
 }
+.text-center{
+width: 80%;
+}
+.png-logo{
+    margin-top:9vh;
+    margin-right: 10vh;
+    width:350px;
+}
+
 
 #skills, #projects {
     background-color: #343a40;
